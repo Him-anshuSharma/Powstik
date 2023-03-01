@@ -9,6 +9,12 @@ clone the project and then run
 flutter pub get
 flutter run
 ```
+to make apk
+```bash
+flutter pub get
+flutter build apk --split-per-abi
+```
+follow the given path in terminal to spot .apk
 
 ## Usage
 

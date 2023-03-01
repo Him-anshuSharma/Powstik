@@ -20,7 +20,7 @@ Internship task
 
 ## Screen Shots
 Sign Up
-<img src="https://github.com/Him-anshuSharma/powstik/blob/main/signup.png" alt="alt text" width="1000" height="250">
+<img src="https://github.com/Him-anshuSharma/powstik/blob/main/signup.png" alt="alt text" width="50" height="200">
 
 Sign In
 ![alt text](https://github.com/Him-anshuSharma/powstik/blob/main/signin.png)

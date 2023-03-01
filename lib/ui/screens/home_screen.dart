@@ -1,10 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:powstik/constants/constants.dart';
-import 'package:powstik/ui/theme/theme_constants.dart' as theme;
 import 'package:powstik/ui/screens/cart_screen.dart';
+import 'package:powstik/ui/screens/home_screen_filtered_items.dart';
+import 'package:powstik/ui/theme/theme_constants.dart' as theme;
+import 'package:provider/provider.dart';
 
-import '../../model/item_category.dart';
+import '../../model/product.dart';
+import '../../provider/filtered_products.dart';
 import '../components/home_screen_list_view.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -15,14 +18,19 @@ class HomeScreen extends StatefulWidget {
 }
 
 class HomeScreenState extends State<HomeScreen> {
+  //List<Product> filteredProducts = [];
+  late var filterProvider;
+  final TextEditingController _searchController = TextEditingController();
   static String HomeScreen = 'HomeScreen';
   List<String> options = Constants.options;
   String query = "";
   int selectedIndex = 0;
   bool searchVisible = false;
+  bool showFilteredItems = false;
 
   @override
   Widget build(BuildContext context) {
+    filterProvider = Provider.of<FilteredProducts>(context);
     return Scaffold(
       appBar: AppBar(
         backgroundColor: theme.COLOR_PRIMARY,
@@ -32,27 +40,44 @@ class HomeScreenState extends State<HomeScreen> {
                 ? Image.asset(
                     'assets/images/logo.png', // set width to 50
                     height: 25,
-              width: 100,
+                    width: 100,
                   )
-                : Container(height: 0,),
+                : Container(
+                    height: 0,
+                  ),
             searchVisible
-                ? const Expanded(
-                  child: TextField(
-                      textAlign: TextAlign.left,
-                      decoration: InputDecoration(
-                        hintText: 'Search items',
-                        hintStyle: TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                        ),
-                        border: InputBorder.none,
-                      ),
-                      style: TextStyle(
-                        fontSize: 16,
+                ? Expanded(
+                    child: TextField(
+                    controller: _searchController,
+                    onSubmitted: (value) {
+                      if (value == '') {
+                        Fluttertoast.showToast(msg: "Enter valid query");
+                      } else {
+                        filterProducts(_searchController.text.toString());
+                        setState(() {
+                          _searchController.text = '';
+                          searchVisible = !searchVisible;
+                          Navigator.pushNamed(
+                              context,
+                              FilteredProductListScreen
+                                  .filteredProductListScreen);
+                        });
+                      }
+                    },
+                    textAlign: TextAlign.left,
+                    decoration: const InputDecoration(
+                      hintText: 'Search items',
+                      hintStyle: TextStyle(
                         color: Colors.black,
+                        fontSize: 16,
                       ),
+                      border: InputBorder.none,
                     ),
-                )
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: Colors.black,
+                    ),
+                  ))
                 : Container(),
           ],
         ),
@@ -143,24 +168,26 @@ class HomeScreenState extends State<HomeScreen> {
                 },
               ),
             ),
-            Expanded(
-              child: SingleChildScrollView(
-                child: HomeScreenListView.buildListView(Constants.categories),
-              ),
-            ),
+            HomeScreenListView.buildListView(Constants.categories),
           ],
         ),
       ),
     );
   }
 
-  ItemCategory? findItemByName(String itemName) {
+  void filterProducts(String query) {
+    filterProvider.clearCart();
     for (var category in Constants.categories) {
-      if (category.itemNames.contains(itemName)) {
-        return category;
+      if (category.itemNames
+          .any((name) => name.toLowerCase().contains(query.toLowerCase()))) {
+        int index = category.itemNames.indexWhere(
+            (name) => name.toLowerCase().contains(query.toLowerCase()));
+        filterProvider.addToCart(Product(
+            name: category.itemNames[index],
+            category: category.title,
+            price: 10,
+            imageUrl: category.imageUrls[index]));
       }
     }
-    return null;
   }
-
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:powstik/ui/screens/checkout_screen.dart';
+import 'package:powstik/ui/screens/home_screen.dart';
 import 'package:powstik/ui/theme/theme_constants.dart' as theme;
 import 'package:provider/provider.dart';
 
@@ -104,7 +106,7 @@ class CartScreen extends StatelessWidget {
                     ),
                     const SizedBox(width: 10),
                     Text(
-                      '\$${cart.totalAmount.toStringAsFixed(2)}',
+                      '\$${cart.totalAmount}',
                       style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -116,7 +118,7 @@ class CartScreen extends StatelessWidget {
                 const SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    // Implement checkout functionality
+                    Navigator.pushNamed(context, CheckoutScreen.checkoutScreen);
                   },
                   style: ElevatedButton.styleFrom(
                     primary: theme.COLOR_PRIMARY,
@@ -150,6 +152,8 @@ class CartItemWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    var cartProvider = Provider.of<Cart>(context);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 10),
       child: ListTile(
@@ -169,7 +173,7 @@ class CartItemWidget extends StatelessWidget {
                   onPressed: () {
                     // Decrease quantity
                     if (cartItem.itemQty > 1) {
-                      cartItem.itemQty--;
+                      cartProvider.removeFromCart(index);
                       Provider.of<Cart>(context, listen: false).notifyListeners();
                     }
                   },
@@ -179,7 +183,7 @@ class CartItemWidget extends StatelessWidget {
                 IconButton(
                   onPressed: () {
                     // Increase quantity
-                    cartItem.itemQty++;
+                    cartProvider.addToCart(cartItem);
                     Provider.of<Cart>(context, listen: false).notifyListeners();
                   },
                   icon: const Icon(Icons.add),

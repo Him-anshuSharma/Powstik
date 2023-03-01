@@ -8,7 +8,7 @@ import '../../provider/cart.dart';
 
 class HomeScreenListView {
   static Widget buildListView(List<ItemCategory> categories) {
-    return SingleChildScrollView(
+    return Expanded(
       child: ListView.builder(
         shrinkWrap: true,
         itemCount: categories.length,
@@ -66,7 +66,7 @@ class HomeScreenListView {
                                 cart.addToCart(CartItem(
                                   itemName: itemName,
                                   itemImage: imageUrl,
-                                  itemPrice: 0.0, // set the price here
+                                  itemPrice: 10.0, // set the price here
                                   itemQty: 1,
                                 ));
                               },

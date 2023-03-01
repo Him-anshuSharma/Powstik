@@ -13,16 +13,22 @@ class Cart extends ChangeNotifier {
     if (existingIndex != -1) {
       _items[existingIndex].itemQty++;
       totalAmount += _items[existingIndex].itemPrice;
+      print("AMOUNT$totalAmount");
     } else {
       _items.add(item);
       totalAmount += _items[_items.length-1].itemPrice;
+      print("AMOUNT$totalAmount");
     }
-
     notifyListeners();
   }
 
   void removeFromCart(int index) {
-    _items.removeAt(index);
+    if(_items[index].itemQty>1){
+      _items[index].itemQty--;
+    }
+    else {
+      _items.removeAt(index);
+    }
     notifyListeners();
   }
 

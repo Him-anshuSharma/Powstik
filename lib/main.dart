@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:powstik/provider/cart.dart';
+import 'package:powstik/provider/filtered_products.dart';
 import 'package:powstik/ui/screens/cart_screen.dart';
+import 'package:powstik/ui/screens/checkout_screen.dart';
 import 'package:powstik/ui/screens/home_screen.dart';
+import 'package:powstik/ui/screens/home_screen_filtered_items.dart';
 import 'package:powstik/ui/screens/sign_in.dart';
 import 'package:powstik/ui/screens/sign_up.dart';
 import 'package:powstik/ui/theme/theme_manager.dart';
@@ -9,8 +12,11 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => Cart(),
+    MultiProvider(
+      providers:[
+        ChangeNotifierProvider<Cart>(create: (context) => Cart()),
+        ChangeNotifierProvider<FilteredProducts>(create: (context) => FilteredProducts()),
+      ],
       child: MyApp(),
     ),
   );
@@ -55,6 +61,8 @@ class _MyAppState extends State<MyApp> {
         SignUpScreen.signUpScreen: (context) => SignUpScreen(),
         HomeScreenState.HomeScreen: (context) => const HomeScreen(),
         CartScreen.cartScreen: (context) => CartScreen(),
+        FilteredProductListScreen.filteredProductListScreen: (context) => const FilteredProductListScreen(),
+        CheckoutScreen.checkoutScreen: (context) => const CheckoutScreen()
       },
     );
   }

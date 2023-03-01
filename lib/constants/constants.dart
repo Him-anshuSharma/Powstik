@@ -1,107 +1,111 @@
 import '../model/item_category.dart';
 
-class Constants{
+class Constants {
   static List<ItemCategory> categories = [
     ItemCategory(
-      title: 'Shop from Top Categories',
+      title: 'Vegetables',
       itemNames: [
-        'Apples',
-        'Bananas',
-        'Oranges',
-        'Grapes',
+        'Potatoes',
+        'Tomatoes',
+        'Onions',
         'Carrots',
         'Broccoli',
+        'Spinach',
       ],
       imageUrls: [
-        'https://picsum.photos/id/1040/300/300',
-        'https://picsum.photos/id/1041/300/300',
-        'https://picsum.photos/id/1042/300/300',
-        'https://picsum.photos/id/1043/300/300',
-        'https://picsum.photos/id/1044/300/300',
-        'https://picsum.photos/id/1045/300/300',
+
+        'https://picsum.photos/75',
+            'https://picsum.photos/75',
+            'https://picsum.photos/75',
+            'https://picsum.photos/75',
+            'https://picsum.photos/75',
+            'https://picsum.photos/75',
       ],
     ),
     ItemCategory(
-      title: 'Gym diet',
+      title: 'Fruits',
       itemNames: [
         'Apples',
-        'Bananas',
         'Oranges',
+        'Bananas',
         'Grapes',
-        'Carrots',
-        'Broccoli',
+        'Pineapples',
+        'Mangoes',
       ],
       imageUrls: [
-        'https://picsum.photos/id/1040/300/300',
-        'https://picsum.photos/id/1041/300/300',
-        'https://picsum.photos/id/1042/300/300',
-        'https://picsum.photos/id/1043/300/300',
-        'https://picsum.photos/id/1044/300/300',
-        'https://picsum.photos/id/1045/300/300',
+
+        'https://picsum.photos/75',
+            'https://picsum.photos/75',
+            'https://picsum.photos/75',
+            'https://picsum.photos/75',
+            'https://picsum.photos/75',
+            'https://picsum.photos/75',
       ],
     ),
     ItemCategory(
-      title: 'Food for new born',
-      itemNames: [
-        'Apples',
-        'Bananas',
-        'Oranges',
-        'Grapes',
-        'Carrots',
-        'Broccoli',
-      ],
-      imageUrls: [
-        'https://picsum.photos/id/1040/300/300',
-        'https://picsum.photos/id/1041/300/300',
-        'https://picsum.photos/id/1042/300/300',
-        'https://picsum.photos/id/1043/300/300',
-        'https://picsum.photos/id/1044/300/300',
-        'https://picsum.photos/id/1045/300/300',
-      ],
-    ),
-    ItemCategory(
-      title: 'Promos for you',
+      title: 'Meat',
       itemNames: [
         'Beef',
-        'Chicken',
         'Pork',
+        'Chicken',
         'Lamb',
+        'Fish',
+        'Seafood',
       ],
       imageUrls: [
-        'https://picsum.photos/id/1050/300/300',
-        'https://picsum.photos/id/1051/300/300',
-        'https://picsum.photos/id/1052/300/300',
-        'https://picsum.photos/id/1053/300/300',
+
+        'https://picsum.photos/75',
+            'https://picsum.photos/75',
+            'https://picsum.photos/75',
+            'https://picsum.photos/75',
+            'https://picsum.photos/75',
+            'https://picsum.photos/75',
       ],
     ),
     ItemCategory(
-      title: 'Today\'s deal',
+      title: 'Beverages',
       itemNames: [
-        'Salmon',
-        'Shrimp',
-        'Tuna',
-        'Lobster',
+        'Coffee',
+        'Tea',
+        'Juice',
+        'Soda',
+        'Beer',
+        'Wine',
       ],
       imageUrls: [
-        'https://picsum.photos/id/1060/300/300',
-        'https://picsum.photos/id/1061/300/300',
-        'https://picsum.photos/id/1062/300/300',
-        'https://picsum.photos/id/1063/300/300',
+        'https://picsum.photos/75',
+            'https://picsum.photos/75',
+            'https://picsum.photos/75',
+            'https://picsum.photos/75',
+            'https://picsum.photos/75',
+            'https://picsum.photos/75',
       ],
     ),
-    ItemCategory(
-      title: 'Recommended for you',
-      itemNames: [
-        'Milk',
-        'Cheese',
-        'Yogurt',
-      ],
-      imageUrls: [
-        'https://picsum.photos/id/1070/300/300',
-        'https://picsum.photos/id/1071/300/300',
-        'https://picsum.photos/id/1072/300/300',
-      ],
-    ),
+    ItemCategory(title: 'Snacks', itemNames: [
+      'Chips',
+      'Cookies',
+      'Candy',
+      'Nuts',
+      'Popcorn',
+      'Crackers',
+    ], imageUrls: [
+      'https://picsum.photos/75',
+      'https://picsum.photos/75',
+      'https://picsum.photos/75',
+      'https://picsum.photos/75',
+      'https://picsum.photos/75',
+      'https://picsum.photos/75',
+    ])
   ];
-  static List<String> options = [    'Healthy Snacks',    'Millets',    'Super Foods',    'Plant Proteins',    'Beverages',    'Medical Nutrition',    'Organic Staples',    'Services',    'All'  ];
+  static List<String> options = [
+    'Healthy Snacks',
+    'Millets',
+    'Super Foods',
+    'Plant Proteins',
+    'Beverages',
+    'Medical Nutrition',
+    'Organic Staples',
+    'Services',
+    'All'
+  ];
 }

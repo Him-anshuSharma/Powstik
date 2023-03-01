@@ -2,6 +2,14 @@
 
 Powstik application inspired from website, currently screen is filled with random data because of unavailability of API. Focused more on functionality rather than UI.
 
+##Features Implemented
+
+1. Login and Signup screens.
+2. An e-commerce product listing screen with an option to add products to the cart.
+3. A cart screen that shows the selected products and their quantity.
+4. Implementing a search bar on the product listing screen that allows users to search for specific products by name or category.
+5. Implementing a checkout screen that shows the selected products, their quantity, and the total amount, along with an option to add a discount code.
+
 ## Installation
 
 clone the project and then run

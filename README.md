@@ -2,7 +2,7 @@
 
 Powstik application inspired from website, currently screen is filled with random data because of unavailability of API. Focused more on functionality rather than UI.
 
-##Features Implemented
+## Features Implemented
 
 1. Login and Signup screens.
 2. An e-commerce product listing screen with an option to add products to the cart.

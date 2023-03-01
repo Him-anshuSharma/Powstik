@@ -21,31 +21,32 @@ Internship task
 ## Screen Shots
 Sign Up
 
-<img src="https://github.com/Him-anshuSharma/powstik/blob/main/signup.png" alt="alt text" width="200" height="200">
+<img src="https://github.com/Him-anshuSharma/powstik/blob/main/signup.png" alt="alt text" width="200" height="400">
 
 Sign In
 
-<img src="https://github.com/Him-anshuSharma/powstik/blob/main/signin.png" alt="alt text">
+<img src="https://github.com/Him-anshuSharma/powstik/blob/main/signin.png" alt="alt text" width="200" height="400">
 
 Home Screen
 
-<img src="https://github.com/Him-anshuSharma/powstik/blob/main/homescreen.png" alt="alt text">
+<img src="https://github.com/Him-anshuSharma/powstik/blob/main/homescreen.png" alt="alt text" width="200" height="400">
 
 Search result
 
-<img src="https://github.com/Him-anshuSharma/powstik/blob/main/search_results.png" alt="alt text">
+<img src="https://github.com/Him-anshuSharma/powstik/blob/main/search_results.png" alt="alt text" width="200" height="400">
 
 Empty Cart
 
-<img src="https://github.com/Him-anshuSharma/powstik/blob/main/empty_cart.png" alt="alt text">
+<img src="https://github.com/Him-anshuSharma/powstik/blob/main/empty_cart.png" alt="alt text" width="200" height="400">
 
 Cart with items
 
-<img src="https://github.com/Him-anshuSharma/powstik/blob/main/cart_with_items.png" alt="alt text">
+<img src="https://github.com/Him-anshuSharma/powstik/blob/main/cart_with_items.png" alt="alt text" width="200" height="400">
 
 Checkout
 
-<img src="https://github.com/Him-anshuSharma/powstik/blob/main/checkout.png" alt="alt text">
+<img src="https://github.com/Him-anshuSharma/powstik/blob/main/checkout.png" alt="alt text" width="200" height="400">
+
 
 ## License
 

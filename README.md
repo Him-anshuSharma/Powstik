@@ -1,34 +1,39 @@
-Greetings App
+# Powstik
 
-This is a mobile application developed in Flutter for www.powstik.com. It includes the following features:
+Powstik application inspired from website, currently screen is filled with random data because of unavailability of API
 
-Login and Signup screens.
-An e-commerce product listing screen with an option to add products to the cart.
-A cart screen that shows the selected products and their quantity.
-Screenshots
+## Installation
 
-Login Screen
-Signup Screen
-Product Listing Screen
-Cart Screen
+clone the project and then run
+```bash
+flutter pub get
+flutter run
+```
 
-Video Demo
+## Usage
 
-[Link to video demo]
+Internship task
 
-Getting Started
+## Screen Recording link
 
-To run this application, you need to have Flutter installed on your machine. Follow the official documentation to install Flutter.
+[Screen recording](https://drive.google.com/file/d/1KwKWXYtVT3sRi8ZrnIiz-lzEAtrj1Ol4/view?usp=sharing)
 
-Clone this repository to your local machine using git clone https://github.com/yourusername/greetings-app.git.
-Open the project in your favorite editor.
-Run flutter pub get to install the dependencies.
-Connect your mobile device or emulator.
-Run flutter run to launch the app.
-Contributing
+## Screen Shots
+Sign Up
+![alt text](https://github.com/Him-anshuSharma/powstik/blob/main/signup.png)
+Sign In
+![alt text](https://github.com/Him-anshuSharma/powstik/blob/main/signin.png)
+Home Screen
+![alt text](https://github.com/Him-anshuSharma/powstik/blob/main/homescreen.png)
+Search result
+![alt text](https://github.com/Him-anshuSharma/powstik/blob/main/search_results.png)
+Empty Cart
+![alt text](https://github.com/Him-anshuSharma/powstik/blob/main/empty_cart.png)
+Cart with items
+![alt text](https://github.com/Him-anshuSharma/powstik/blob/main/cart_with_items.png)
+Checkout
+![alt text](https://github.com/Him-anshuSharma/powstik/blob/main/checkout.png)
 
-If you find any issues or want to contribute to this project, feel free to submit a pull request.
+## License
 
-License
-
-This project is licensed under the MIT License.
+[MIT](https://choosealicense.com/licenses/mit/)

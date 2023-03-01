@@ -20,7 +20,7 @@ Internship task
 
 ## Screen Shots
 Sign Up
-![alt text](https://github.com/Him-anshuSharma/powstik/blob/main/signup.png=100*40)
+![alt text](https://github.com/Him-anshuSharma/powstik/blob/main/signup.png=1000*250)
 Sign In
 ![alt text](https://github.com/Him-anshuSharma/powstik/blob/main/signin.png)
 Home Screen
